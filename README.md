@@ -22,6 +22,8 @@
 
 <hr>
 
+>> THE POWERSHELL BREAK MANY OF COMMANDS BELOW, USE CMD IF ON WINDOWS
+
 	cd .\myFolder
 	docker rmi -f ImageNameOrHashToRemove	
 	docker rm -f ContainerNameOrHashToRemove
