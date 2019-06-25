@@ -37,6 +37,10 @@
 		apt-get install git
 		git --version
 		exit 
+	docker start CntDebGitA
+	docker attach CntDebGitA
+		git --version
+		exit 	
 	docker ps -a
 	docker images
 	docker commit CntDebGitA img-deb-git-b
