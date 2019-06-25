@@ -31,7 +31,7 @@
 	docker pull debian
 	docker images
 	docker ps -a
-	docker run --name CntDebGitA -it debian 
+	docker run -v %CD%\:/mappedToHost --name CntDebGitA -it debian 
 		apt-get update
 		apt-get upgrade
 		apt-get install git
