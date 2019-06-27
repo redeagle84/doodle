@@ -45,7 +45,8 @@
 		EOF		
 		exit 
 	dir /B
-	docker build -t builtfromdockfile:v1 .
+	docker build -t builtfromdockfileA:latest .
+	docker build -t builtfromdockfileB:v1 .
 		# SECURITY WARNING: You are building a Docker image from Windows against a 
 		#   non-Windows Docker host. 
 		# All files and directories added to build context will 
