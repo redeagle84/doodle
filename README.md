@@ -36,7 +36,18 @@
 		apt-get upgrade
 		apt-get install git
 		git --version
+		cd /mappedToHost		
+		cat << EOF > ./Dockerfile
+			FROM debian
+			RUN apt-get update && apt-get upgrade -y && apt-get install -y git
+		EOF		
 		exit 
+	dir /B
+	docker build -t builtfromdockfile:v1 .
+		# SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. 
+		# All files and directories added to build context will have '-rwxr-xr-x' permissions. 
+		# It is recommended to double check and reset permissions for sensitive files and directories.
+	cd ..
 	docker start CntDebGitA
 	docker attach CntDebGitA
 		git --version
