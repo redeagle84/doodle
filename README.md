@@ -44,9 +44,12 @@
 		exit 
 	dir /B
 	docker build -t builtfromdockfile:v1 .
-		# SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. 
-		# All files and directories added to build context will have '-rwxr-xr-x' permissions. 
-		# It is recommended to double check and reset permissions for sensitive files and directories.
+		# SECURITY WARNING: You are building a Docker image from Windows against a 
+		#   non-Windows Docker host. 
+		# All files and directories added to build context will 
+		#   have '-rwxr-xr-x' permissions. 
+		# It is recommended to double check and reset permissions for 
+		#   sensitive files and directories.
 	cd ..
 	docker start CntDebGitA
 	docker attach CntDebGitA
